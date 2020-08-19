@@ -4,6 +4,48 @@
     <SubNodes>
       <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="Campaigns" FileName="Campaigns">
         <SubNodes>
+          <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="DemoCampaign" FileName="Campaigns\DemoCampaign">
+            <SubNodes>
+              <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="Missions" FileName="Campaigns\DemoCampaign\Missions">
+                <SubNodes>
+                  <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="AirbaseIntruders" FileName="Campaigns\DemoCampaign\Missions\AirbaseIntruders">
+                    <SubNodes>
+                      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="AirbaseIntruders.sqx" FileName="Campaigns\DemoCampaign\Missions\AirbaseIntruders\AirbaseIntruders.sqx">
+                        <SubNodes />
+                      </ProjectNodeViewModel>
+                    </SubNodes>
+                  </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="AsEasyAsItGets" FileName="Campaigns\DemoCampaign\Missions\AsEasyAsItGets">
+                    <SubNodes>
+                      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="AsEasyAsItGets.sqx" FileName="Campaigns\DemoCampaign\Missions\AsEasyAsItGets\AsEasyAsItGets.sqx">
+                        <SubNodes />
+                      </ProjectNodeViewModel>
+                    </SubNodes>
+                  </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="DragRacing" FileName="Campaigns\DemoCampaign\Missions\DragRacing">
+                    <SubNodes>
+                      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="DragRacing.sqx" FileName="Campaigns\DemoCampaign\Missions\DragRacing\DragRacing.sqx">
+                        <SubNodes />
+                      </ProjectNodeViewModel>
+                    </SubNodes>
+                  </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="LostVehicles" FileName="Campaigns\DemoCampaign\Missions\LostVehicles">
+                    <SubNodes>
+                      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="LostVehicles.sqx" FileName="Campaigns\DemoCampaign\Missions\LostVehicles\LostVehicles.sqx">
+                        <SubNodes />
+                      </ProjectNodeViewModel>
+                    </SubNodes>
+                  </ProjectNodeViewModel>
+                </SubNodes>
+              </ProjectNodeViewModel>
+              <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="DemoCampaign.sqx" FileName="Campaigns\DemoCampaign\DemoCampaign.sqx">
+                <SubNodes />
+              </ProjectNodeViewModel>
+              <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="InitCampaign.sqx" FileName="Campaigns\DemoCampaign\InitCampaign.sqx">
+                <SubNodes />
+              </ProjectNodeViewModel>
+            </SubNodes>
+          </ProjectNodeViewModel>
           <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="MyCampaign" FileName="Campaigns\MyCampaign">
             <SubNodes>
               <ProjectNodeViewModel xsi:type="ProjectFolderNodeViewModel" Name="Missions" FileName="Campaigns\MyCampaign\Missions">
