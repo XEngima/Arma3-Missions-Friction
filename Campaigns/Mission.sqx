@@ -84,7 +84,7 @@ namespace Campaigns
 		//   classNull or an empty collection if all markers are expected to be found on the map.
 		public virtual method MissionMarkerCollection GetMarkers()
 		{
-			return [[]] new MissionMarkerCollection;
+			return classNull;
 		};
 		
 		#endregion

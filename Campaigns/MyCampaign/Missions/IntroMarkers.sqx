@@ -19,8 +19,8 @@ namespace Campaigns.MyCampaign
 		{
 			[
 				[
-					["m05a_StartArea", [100, 100, 100], "RECTANGLE", [100,150], 15, "ColorRed"] call Marker.NewShapeMarker,
-					["m_Girna", [10, 10, 10], "hd_destroy", "ColorBlack", "Target"] call Marker.NewIconMarker
+					["m_ExplicitStartArea", [1632,5216,0], "RECTANGLE", [40,60], 0] call Marker.NewShapeMarker,
+					["m_Target", [1700,5300,0], "ELLIPSE", [100, 100], 10, "ColorRed", "Solid", "", 0.1] call Marker.NewShapeMarker
 				]
 			] call _base.Constructor;
 		};

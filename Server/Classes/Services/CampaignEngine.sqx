@@ -509,7 +509,7 @@ namespace Tvtcf.Server
 				_mEastReturnObjectiveCompleted = false;
 				
 				[true] call PublicVariableHandler.BroadcastMissionHasStarted;
-				["ClientEventReciever.OnMissionStarting", [_isFirstMission]] call Remote.Invoke;
+				["ClientEventReciever.OnMissionStarting", [call _mCurrentMission.GetMarkers, _isFirstMission]] call Remote.Invoke;
 				
 				// Create AI units
 				private _westlyGroup = [west] call _mMissionUnitsHandler.GetGroupBySide;

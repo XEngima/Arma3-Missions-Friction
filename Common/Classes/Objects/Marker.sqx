@@ -19,9 +19,10 @@ namespace Tvtcf.Common
 			"_position" as Array, 
 			["_type" as String, "hd_dot"], 
 			["_color" as String, "ColorBlack"],
-			["_text" as String, ""])
+			["_text" as String, ""],
+			["_alpha" as Scalar, 0.4])
 		{			
-			return ([_name, _position, "ICON", [1, 1], 0, _type, _color, "Solid", _text, 0.4] new Marker);
+			return ([_name, _position, "ICON", [1, 1], 0, _type, _color, "Solid", _text, _alpha] new Marker);
 		};
 	
 		// Creates a public shape marker.

@@ -11,14 +11,12 @@ namespace Tvtcf.Common
 {
 	public class MissionMarkerCollection
 	{
-		private fields ["_mMarkers" as Array /* of Marker */];
-	
 		// Creates a MissionMarkerCollection object.
 		public constructor("_markers" as Array /* of Marker */)
 		{
-			_mMarkers = _markers;
+			_self.Markers = _markers;
 		};
 		
-		
+		public property Array Markers { get; private set; };
 	};
 };

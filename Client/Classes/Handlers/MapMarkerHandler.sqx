@@ -14,7 +14,7 @@ namespace Tvtcf.Client
 {
 	public class MapMarkerHandler
 	{
-		private fields ["_mBaseMarkersConfig" as IBaseMarkersConfig, "_mLocalMarkers" as Array];
+		private fields ["_mBaseMarkersConfig" as IBaseMarkersConfig, "_mLocalMarkers" as Array, "_mExplicitMissionMarkers" as Array];
 		
 		// Creates a MapMarkerHandler object.
 		public constructor("_baseMarkersConfig" as IBaseMarkersConfig)
@@ -23,6 +23,7 @@ namespace Tvtcf.Client
 			_mLocalMarkers = [];
 			_self.UseExtractionMarker = false;
 			_self.InsertionMarker = "";
+			_mExplicitMissionMarkers = [];
 		};
 		
 		public property String InsertionMarker { get; private set; };
@@ -116,6 +117,34 @@ namespace Tvtcf.Client
 					_marker setMarkerTextLocal (markerText _x.Name);
 				};
 			} foreach _missionMarkersInfo.Markers as MarkerInfo;
+		};
+		
+		public method AddExplicitMissionMarkers("_missionMarkers" as MissionMarkerCollection)
+		{
+			{
+				deleteMarker _x;
+			} foreach _mExplicitMissionMarkers;
+		
+			_mExplicitMissionMarkers = [];
+
+			// Set markers from the mission markers collection
+			{
+				if (!([_x.Name] call Sqx.Markers.MarkerHelper.MarkerExists)) then
+				{
+					var _marker = createMarker [_x.Name, _x.Position];
+					
+					_marker setMarkerShape _x.Shape;
+					_marker setMarkerSize _x.Size;
+					_marker setMarkerDir _x.Direction;
+					_marker setMarkerType _x.Type;
+					_marker setMarkerColor _x.Color;
+					_marker setMarkerBrush _x.Brush;
+					_marker setMarkerText _x.Text;
+					_marker setMarkerAlpha 0;
+					
+					_mExplicitMissionMarkers pushBack _marker;
+				};
+			} foreach _missionMarkers.Markers as Marker;
 		};
 	};
 };

@@ -38,10 +38,13 @@ namespace Tvtcf.Client.Statics
 			call TvtcfActionMenuHandler.UpdateVisibleOptions;
 		};
 		
-		public static method OnMissionStarting("_isFirstMission" as Boolean)
+		public static method OnMissionStarting("_missionMarkers" as MissionMarkerCollection, "_isFirstMission" as Boolean)
 		{
 			// Delete tasks
 			call ClientObjects.TaskHandler.DeleteAllTasks;
+			
+			// Add explicit map markers
+			[_missionMarkers] call ClientObjects.MapMarkerHandler.AddExplicitMissionMarkers;
 		};
 		
 		public static method OnMissionSetup("_missionMarkersInfo" as MissionMarkersInfo)
