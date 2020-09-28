@@ -76,6 +76,17 @@ namespace Campaigns
 		{
 		};
 		
+		// Gets the mission markers associated with this mission.
+		// The purpose with adding marker definitions in this method is to get rid of them on the map. E.g.
+		//   markers on the map can be accidentaly moved, and is more difficult to share between campaigns.
+		//   If markers in this collection also exist on the map, the ones in the collection will be used.
+		// Returns (MissionMarkerCollection): A collection of markers necessary for the mission to run. 
+		//   classNull or an empty collection if all markers are expected to be found on the map.
+		public virtual method MissionMarkerCollection GetMarkers()
+		{
+			return [[]] new MissionMarkerCollection;
+		};
+		
 		#endregion
 		
 		#region Private Methods

@@ -1,0 +1,28 @@
+/*
+ * Name:	IntroMarkers
+ * Date:	2020-09-28
+ * Version: 1.0
+ * Author:  Engima
+ *
+ * Description:
+ * Marker definitions for the Intro mission.
+ */
+
+using Tvtcf.Common;
+
+namespace Campaigns.MyCampaign
+{
+	public class IntroMarkers : MissionMarkerCollection
+	{
+		// Creates a IntroMarkers object.
+		public constructor()
+		{
+			[
+				[
+					["m05a_StartArea", [100, 100, 100], "RECTANGLE", [100,150], 15, "ColorRed"] call Marker.NewShapeMarker,
+					["m_Girna", [10, 10, 10], "hd_destroy", "ColorBlack", "Target"] call Marker.NewIconMarker
+				]
+			] call _base.Constructor;
+		};
+	};
+};

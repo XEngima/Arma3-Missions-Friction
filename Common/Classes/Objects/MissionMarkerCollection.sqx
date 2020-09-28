@@ -1,0 +1,24 @@
+/*
+ * Name:	MissionMarkerCollection
+ * Date:	2020-09-28
+ * Version: 1.0
+ * Author:  Engima
+ *
+ * Description:
+ * Marker definitions for a mission.
+ */
+namespace Tvtcf.Common
+{
+	public class MissionMarkerCollection
+	{
+		private fields ["_mMarkers" as Array /* of Marker */];
+	
+		// Creates a MissionMarkerCollection object.
+		public constructor("_markers" as Array /* of Marker */)
+		{
+			_mMarkers = _markers;
+		};
+		
+		
+	};
+};

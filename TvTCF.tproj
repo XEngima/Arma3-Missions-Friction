@@ -11,6 +11,9 @@
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="Intro.sqx" FileName="Campaigns\MyCampaign\Missions\Intro.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="IntroMarkers.sqx" FileName="Campaigns\MyCampaign\Missions\IntroMarkers.sqx">
+                    <SubNodes />
+                  </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="Survive.sqx" FileName="Campaigns\MyCampaign\Missions\Survive.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
@@ -220,10 +223,16 @@
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="DictionaryItem.sqx" FileName="Common\Classes\Objects\DictionaryItem.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="Marker.sqx" FileName="Common\Classes\Objects\Marker.sqx">
+                    <SubNodes />
+                  </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="MarkerInfo.sqx" FileName="Common\Classes\Objects\MarkerInfo.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="MissionBriefing.sqx" FileName="Common\Classes\Objects\MissionBriefing.sqx">
+                    <SubNodes />
+                  </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="MissionMarkerCollection.sqx" FileName="Common\Classes\Objects\MissionMarkerCollection.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="MissionMarkersInfo.sqx" FileName="Common\Classes\Objects\MissionMarkersInfo.sqx">
