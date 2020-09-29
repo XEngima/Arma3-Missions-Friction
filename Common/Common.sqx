@@ -16,6 +16,8 @@ call compile preprocessFileLineNumbers "Common\Classes\Objects\ObjectiveChange.s
 call compile preprocessFileLineNumbers "Common\Classes\Objects\ObjectiveChangeCollection.sqx";
 call compile preprocessFileLineNumbers "Common\Classes\Objects\MissionMarkerCollection.sqx";
 call compile preprocessFileLineNumbers "Common\Classes\Objects\Marker.sqx";
+call compile preprocessFileLineNumbers "Common\Classes\Objects\IconMarker.sqx";
+call compile preprocessFileLineNumbers "Common\Classes\Objects\ShapeMarker.sqx";
 
 using Tvtcf.Common;
 using Tvtcf.Common.Statics;

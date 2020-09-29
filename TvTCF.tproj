@@ -11,7 +11,7 @@
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="Intro.sqx" FileName="Campaigns\MyCampaign\Missions\Intro.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
-                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="IntroMarkers.sqx" FileName="Campaigns\MyCampaign\Missions\IntroMarkers.sqx">
+                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="IntroMarkers.Stratis.sqx" FileName="Campaigns\MyCampaign\Missions\IntroMarkers.Stratis.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="Survive.sqx" FileName="Campaigns\MyCampaign\Missions\Survive.sqx">
@@ -223,6 +223,9 @@
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="DictionaryItem.sqx" FileName="Common\Classes\Objects\DictionaryItem.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="IconMarker.sqx" FileName="Common\Classes\Objects\IconMarker.sqx">
+                    <SubNodes />
+                  </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="Marker.sqx" FileName="Common\Classes\Objects\Marker.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
@@ -251,6 +254,9 @@
                     <SubNodes />
                   </ProjectNodeViewModel>
                   <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="ObjectiveChangeCollection.sqx" FileName="Common\Classes\Objects\ObjectiveChangeCollection.sqx">
+                    <SubNodes />
+                  </ProjectNodeViewModel>
+                  <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="ShapeMarker.sqx" FileName="Common\Classes\Objects\ShapeMarker.sqx">
                     <SubNodes />
                   </ProjectNodeViewModel>
                 </SubNodes>

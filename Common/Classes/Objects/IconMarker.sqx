@@ -1,0 +1,26 @@
+/*
+ * Name:	IconMarker
+ * Date:	2020-09-29
+ * Version: 1.0
+ * Author:  Engima
+ *
+ * Description:
+ * Represents a map marker of icon type to be used by a mission.
+ */
+namespace Tvtcf.Common
+{
+	public class IconMarker : Marker
+	{
+		// Creates a IconMarker object.
+		public constructor(
+			"_name" as String,
+			"_position" as Array, 
+			["_type" as String, "hd_dot"], 
+			["_color" as String, "ColorBlack"],
+			["_text" as String, ""],
+			["_alpha" as Scalar, 0.4])
+		{
+			[_name, _position, "ICON", [1, 1], 0, _type, _color, "Solid", _text, _alpha] call _base.Constructor;
+		};
+	};
+};
