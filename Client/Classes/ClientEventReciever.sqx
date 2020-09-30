@@ -124,7 +124,10 @@ namespace Tvtcf.Client.Statics
 				
 				if (_objectivePrio == ObjectivePrio.Return && _objectiveState == ObjectiveState.Succeeded) then
 				{
-					private _baseMarkerName = [playerSide, BaseMarker.Respawn] call CommonObjects.BaseMarkersConfig.GetMarkerName;
+					// Remove eventual extraction symbol
+					call ClientObjects.ExtractionSymbolHandler.DeleteSymbol;
+					
+					var _baseMarkerName = [playerSide, BaseMarker.Respawn] call CommonObjects.BaseMarkersConfig.GetMarkerName;
 					
 					_teleporter = [getMarkerPos _baseMarkerName] new TeleportService;
 					
@@ -132,6 +135,7 @@ namespace Tvtcf.Client.Statics
 						params ["_teleporter" as TeleportService];
 						
 						sleep 5;
+						call ClientObjects.CameraHandler.ResetPlayerCamera;
 						call _teleporter.RunAsync;
 					};
 				};
@@ -163,9 +167,6 @@ namespace Tvtcf.Client.Statics
 			else {
 				player setUnitLoadout "O_Soldier_F";
 			};
-		
-			// Remove eventual extraction symbol
-			call ClientObjects.ExtractionSymbolHandler.DeleteSymbol;
 		};
 		
 		public static method OnMissionEnded("_missionResult" as MissionResult, "_isLastMission" as Boolean)
