@@ -67,7 +67,7 @@ namespace Campaigns.ShoeLace
 			_missions pushBack _mAirStationAssault;
 		};
 		
-		public override method Mission GetNextMission()
+		protected override method Mission GetNextMission()
 		{
 			var _mission = call _base.GetNextMission;
 			
