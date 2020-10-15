@@ -679,6 +679,8 @@ namespace Campaigns.ShoeLace
 		
 		public override method Cleanup()
 		{
+			deleteVehicle _mAmmoBoxActing;
+			deleteVehicle _mAmmoBoxOpposing;
 			deleteVehicle _mHelipad1;
 			deleteVehicle _mHelipad2;
 			deleteVehicle _mHelipad3;
