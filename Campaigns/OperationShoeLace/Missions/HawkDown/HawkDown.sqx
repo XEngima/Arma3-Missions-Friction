@@ -96,7 +96,7 @@ namespace Campaigns.ShoeLace
 		protected override method MissionObjective CreatePrimaryObjectiveForActing()
 		{
 			private _shortDescription = "Destroy wreckage";
-			private _longDescription = "Find the downed helicopter, check for survivors, and destroy the helicopter before it falls into enemy hands.";
+			private _longDescription = "Find the downed helicopter and destroy it before it falls into enemy hands.";
 			
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
@@ -125,13 +125,13 @@ namespace Campaigns.ShoeLace
 		
 		protected override method ObjectiveState CheckPrimaryObjectiveStateOpposing()
 		{
-			private _greyHawkAlive = alive _mGreyHawk;
-			
 			if (_mIntelCollected) then {
 				return ObjectiveState.Succeeded;
 			};
 			
-			if (!_greyHawkAlive) then {
+			var _greyHawkAlive = alive _mGreyHawk;
+			
+			if (_self.MissionTimeElapsed > 1 && !_greyHawkAlive) then {
 				return ObjectiveState.Failed;
 			};
 			
