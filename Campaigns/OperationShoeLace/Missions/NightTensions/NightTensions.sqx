@@ -149,7 +149,6 @@ namespace Campaigns.ShoeLace
 			if (_objectiveMarker == _mPrimaryObjectiveMarker) then
 			{
 				_mDrawingsAreStolen = true;
-				[MissionSide.Acting, "Found drawings! Task will be completed if you bring them home."] call _self.ShowNotification;
 				_mSoundSource = createSoundSource ["Sound_Alarm2", getPos nearestBuilding _actor, [], 0];
 			}
 			else {
@@ -196,7 +195,7 @@ namespace Campaigns.ShoeLace
 		protected override method MissionObjective CreatePrimaryObjectiveForOpposing()
 		{
 			private _shortDescription = "Patrol the airbase";
-			private _longDescription = "Patrol the airbase and keep it safe by preventing any intruders to steal and destroy anything.";
+			private _longDescription = "Patrol the airbase and keep it safe by preventing any intruders to steal or destroy anything.";
 			
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
@@ -209,16 +208,9 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-//		protected override method OnActingGroupInserted("_e" as Tvtcf.Server.InsertionEventArgs)
-//		{
-//			_mSoundSource = createSoundSource ["Sound_Alarm2", _e.Position, [], 0];
-//		};
-		
 		protected override method ObjectiveState CheckPrimaryObjectiveStateActing()
 		{
-			var _atLeastOneReturned = ({ alive _x && _x distance _self.InsertionPointActing < 75 } count _self.ActingUnits) > 0;
-			
-			if (_mDrawingsAreStolen &&  _atLeastOneReturned) then {
+			if (_mDrawingsAreStolen) then {
 				return ObjectiveState.Succeeded;
 			};
 			
@@ -238,6 +230,10 @@ namespace Campaigns.ShoeLace
 		
 		protected override method ObjectiveState CheckPrimaryObjectiveStateOpposing()
 		{
+			if (_mDrawingsAreStolen || !alive _mHelicopter) then {
+				return ObjectiveState.Failed;
+			};
+		
 			var _allEnemiesDead = call _self.CountUnitsAliveActing == 0;
 			var _missionHasEnded = _self.RemainingTime == 0;
 		
