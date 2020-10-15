@@ -580,9 +580,10 @@ namespace Campaigns.ShoeLace
 			
 			if (_mChopper3State == TransportState.Waiting && _mChopper2State == TransportState.Transporting && time > _mChopper2LiftOffTime + 3) then
 			{
-				private _allPlayersInChopper = { alive _x && vehicle _x == _mChopper3 } count _self.ActingUnits == call _self.CountUnitsAliveActing;
+				var _playersInChopper = { alive _x && vehicle _x == _mChopper3 } count _self.ActingUnits > 0;
+				var _playerNearOutsideChopper = { alive _x && vehicle _x != _mChopper3 && _x distance _mChopper3 < 200 } count _self.ActingUnits > 0;
 
-				if (_allPlayersInChopper) then {
+				if (_playersInChopper && !_playerNearOutsideChopper) then {
 					private _waypoint = (group driver _mChopper3) addWaypoint [getMarkerPos "m11a_FirstChopperWaypoint", 0];
 					_waypoint setWaypointBehaviour "CARELESS";
 					_waypoint = (group driver _mChopper3) addWaypoint [getMarkerPos "m11a_LandingZone3", 0];
@@ -610,9 +611,10 @@ namespace Campaigns.ShoeLace
 			// Opposing
 			
 			if (_mArmoredTransportState == TransportState.Waiting) then {
-				private _allPlayersIn = { alive _x && vehicle _x == _mArmoredTransport1 } count _self.OpposingUnits == call _self.CountUnitsAliveOpposing;
+				var _playersInTransport = { alive _x && vehicle _x == _mArmoredTransport1 } count _self.OpposingUnits > 0;
+				var _playerNearOutsideTransport = { alive _x && vehicle _x != _mArmoredTransport1 && _x distance _mArmoredTransport1 < 200 } count _self.OpposingUnits > 0;
 
-				if (_allPlayersIn) then {
+				if (_playersInTransport && !_playerNearOutsideTransport) then {
 					private _waypoint = (group driver _mArmoredTransport1) addWaypoint [getMarkerPos "m11o_ArmorUnloadMarker", 50];
 					_waypoint setWaypointBehaviour "AWARE";
 					(group driver _mArmoredTransport1) setBehaviour "AWARE";
