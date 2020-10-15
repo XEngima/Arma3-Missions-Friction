@@ -123,7 +123,7 @@ namespace Campaigns.ShoeLace
 		{
 			var _boxIsOurs = _mBoxOwnerSide == "ACTING";
 			
-			if (_boxIsOurs && (_self.SecondaryObjectiveStateActing == ObjectiveState.Succeeded || _self.RemainingTime == 0)) then {
+			if (_boxIsOurs) then {
 				_self.GainedTokensActing pushBack "DRONE";
 				[MissionSide.Acting, "Gained: Drone."] call _self.ShowNotification;
 				return ObjectiveState.Succeeded;
@@ -147,7 +147,7 @@ namespace Campaigns.ShoeLace
 		{
 			var _boxIsOurs = _mBoxOwnerSide == "OPPOSING";
 			
-			if (_boxIsOurs && (_self.SecondaryObjectiveStateOpposing == ObjectiveState.Succeeded || _self.RemainingTime == 0)) then {
+			if (_boxIsOurs) then {
 				_self.GainedTokensOpposing pushBack "DRONE";
 				[MissionSide.Opposing, "Gained: Drone."] call _self.ShowNotification;
 				return ObjectiveState.Succeeded;
