@@ -494,13 +494,13 @@ namespace Campaigns.ShoeLace
 			//hint ("A: " + str _actingCloseToTowerCount + ", O: " + str _opposingCloseToTowerCount + ", I: " + str _indepentendCloseToTowerCount + ", T: " + str _total);
 		
 			// Check if one of the sides are about to win
-			if (_actingCloseToTowerCount >= (_opposingCloseToTowerCount + _indepentendCloseToTowerCount) * 1.5 && _mLeaningToSide != "ACTING") then {
+			if (_actingCloseToTowerCount >= (_opposingCloseToTowerCount + _indepentendCloseToTowerCount) * 1.3 && _mLeaningToSide != "ACTING") then {
 				[MissionSide.Acting, "Winning momentum."] call _self.ShowNotification;
 				[MissionSide.Opposing, "Loosing momentum."] call _self.ShowNotification;
 				_mLeaningToSide = "ACTING";
 			};
 			
-			if (_opposingCloseToTowerCount >= (_actingCloseToTowerCount + _indepentendCloseToTowerCount) * 1.5 && _mLeaningToSide != "OPPOSING") then {
+			if (_opposingCloseToTowerCount >= (_actingCloseToTowerCount + _indepentendCloseToTowerCount) * 1.3 && _mLeaningToSide != "OPPOSING") then {
 				[MissionSide.Acting, "Loosing momentum."] call _self.ShowNotification;
 				[MissionSide.Opposing, "Winning momentum."] call _self.ShowNotification;
 				_mLeaningToSide = "OPPOSING";
