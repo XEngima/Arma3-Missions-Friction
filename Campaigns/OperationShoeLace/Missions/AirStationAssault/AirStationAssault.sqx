@@ -146,8 +146,8 @@ namespace Campaigns.ShoeLace
 			
 			if ("DRONE" in _self.GainedTokensActing) then {
 				var _actualSide = [MissionSide.Acting] call _self.GetActualSide;
-				var _uavBackpackClassName = ["UAV BACKPACK", _actualSide] call _self.ObjectTypeDictionary.GetVehicleType;
-				var _uavTerminalClassName = ["UAV TERMINAL", _actualSide] call _self.ObjectTypeDictionary.GetVehicleType;
+				var _uavBackpackClassName = ["UAV BACKPACK", _actualSide] call _self.VehicleDictionary.GetVehicleType;
+				var _uavTerminalClassName = ["UAV TERMINAL", _actualSide] call _self.VehicleDictionary.GetVehicleType;
 				_self.ActingOrdnanceBox addBackpackCargoGlobal [_uavBackpackClassName, 1];
 				_self.ActingOrdnanceBox addItemCargoGlobal [_uavTerminalClassName, 1];
 			};
@@ -163,8 +163,8 @@ namespace Campaigns.ShoeLace
 				};
 				
 				var _actualSide = [MissionSide.Opposing] call _self.GetActualSide;
-				var _uavBackpackClassName = ["UAV BACKPACK", _actualSide] call _self.ObjectTypeDictionary.GetVehicleType;
-				var _uavTerminalClassName = ["UAV TERMINAL", _actualSide] call _self.ObjectTypeDictionary.GetVehicleType;
+				var _uavBackpackClassName = ["UAV BACKPACK", _actualSide] call _self.VehicleDictionary.GetVehicleType;
+				var _uavTerminalClassName = ["UAV TERMINAL", _actualSide] call _self.VehicleDictionary.GetVehicleType;
 				_self.OpposingOrdnanceBox addBackpackCargoGlobal [_uavBackpackClassName];
 				_self.OpposingOrdnanceBox addItemCargoGlobal [_uavTerminalClassName, 1];
 			};
