@@ -13,7 +13,6 @@ using Sqx.Services;
 using Tvtcf.Common;
 using Tvtcf.Communication;
 using Tvtcf.Server;
-using Campaigns.Shared;
 
 namespace Campaigns
 {
@@ -32,8 +31,8 @@ namespace Campaigns
 			
 			call _base.Constructor;
 			
-			_self.ObjectTypeDictionary = new ObjectTypeDictionary;
-			_self.SoldierTypeDictionary = new SoldierTypeDictionary;
+			_self.VehicleDictionary = new VehicleDictionary;
+			_self.SoldierDictionary = new SoldierDictionary;
 			_self.GainedTokensActing = [];
 			_self.LostTokensActing = [];
 			_self.GainedTokensOpposing = [];
@@ -203,7 +202,7 @@ namespace Campaigns
 		protected method Object CreateSideVehicle("_vehicleTypeAlias" as String, "_position" as Array, "_direction" as Scalar, "_missionSide" as MissionSide, ["_avoidCollision" as Boolean, false], ["_withCrew" as Boolean, false])
 		{
 			private _side = [_missionSide] call _self.GetActualSide;
-			private _vehicleType = [_vehicleTypeAlias, _side] call _self.ObjectTypeDictionary.GetVehicleType;
+			private _vehicleType = [_vehicleTypeAlias, _side] call _self.VehicleDictionary.GetVehicleType;
 			
 			return [_vehicleType, _position, _direction, _avoidCollision, _withCrew] call _self.CreateVehicle;
 		};
@@ -248,7 +247,7 @@ namespace Campaigns
 		protected method Object CreateSideVehicleOnMarker("_vehicleTypeAlias" as String, "_markerName" as String, "_missionSide" as MissionSide, ["_avoidCollision" as Boolean, false], ["_withCrew" as Boolean, false])
 		{
 			private _side = [_missionSide] call _self.GetActualSide;
-			private _vehicleType = [_vehicleTypeAlias, _side] call _self.ObjectTypeDictionary.GetVehicleType;
+			private _vehicleType = [_vehicleTypeAlias, _side] call _self.VehicleDictionary.GetVehicleType;
 			
 			return [_vehicleType, _markerName, _avoidCollision, _withCrew] call _self.CreateVehicleOnMarker;
 		};
@@ -278,7 +277,7 @@ namespace Campaigns
 		protected method Object CreateSideVehicleInBase("_vehicleTypeAlias" as String, "_baseMarker" as BaseMarker, "_missionSide" as MissionSide, ["_avoidCollision" as Boolean, false], ["_withCrew" as Boolean, false])
 		{
 			private _side = [_missionSide] call _self.GetActualSide;
-			private _vehicleType = [_vehicleTypeAlias, _side] call _self.ObjectTypeDictionary.GetVehicleType;
+			private _vehicleType = [_vehicleTypeAlias, _side] call _self.VehicleDictionary.GetVehicleType;
 			private _spawnMarker = [_side, _baseMarker] call _mBaseMarkersConfig.GetMarkerName;
 			
 			return [_vehicleType, _spawnMarker, _avoidCollision, _withCrew] call _self.CreateVehicleOnMarker;
@@ -306,7 +305,7 @@ namespace Campaigns
 		protected method Object CreateSideAiSoldier("_unitTypeAlias" as String, "_position" as Array, "_missionSide" as MissionSide, ["_group" as Group, grpNull])
 		{
 			private _side = [_missionSide] call _self.GetActualSide;
-			private _soldierType = [_unitTypeAlias, _side] call _self.SoldierTypeDictionary.GetSoldierType;
+			private _soldierType = [_unitTypeAlias, _side] call _self.SoldierDictionary.GetSoldierType;
 			
 			if (isNull _group) then {
 				_group = createGroup [_side, true];
@@ -400,7 +399,7 @@ namespace Campaigns
 		// Gets the Remote object that contains logic to send event notifications to clients, and 
 		// can be used as a cleaner substitute for the remoteExec command.
 		// This Remote object is to be extended by the campaign developer with new methods when needed.
-		protected property Campaigns.Shared.Network.Remote Remote { get; private set; };
+		protected property Campaigns.Network.Remote Remote { get; private set; };
 		
 		// Gets or sets the insertion map markers for the acting side.
 		// This property must be set in the initialization phase of the mission.
@@ -426,10 +425,10 @@ namespace Campaigns
 		protected property Scalar StartTimeOfDay { get; private set; };
 		
 		// Gets the object type dictionary that translates a vehicle type alias into its real class name.
-		protected property ObjectTypeDictionary ObjectTypeDictionary { get; private set; };
+		protected property VehicleDictionary VehicleDictionary { get; private set; };
 		
 		// Gets the soldier type dictionary that translates a unit type alias into its real class name.
-		protected property SoldierTypeDictionary SoldierTypeDictionary { get; private set; };
+		protected property SoldierDictionary SoldierDictionary { get; private set; };
 		
 		// Gets the units on the acting side that was inserted to execute the mission.
 		protected property Array ActingUnits { get; private set; };
@@ -514,7 +513,7 @@ namespace Campaigns
 		};
 		
 		// Loads the mission with all gained and lost history items.
-		public method Prepare("_baseMarkersConfig" as IBaseMarkersConfig, "_serverActionHandler" as ServerActionHandler, "_westlyGroup" as Group, "_eastlyGroup" as Group, "_gainedTokensActing" as Array, "_lostTokensActing" as Array, "_gainedTokensOpposing" as Array, "_lostTokensOpposing" as Array, "_remote" as Campaigns.Shared.Network.Remote)
+		public method Prepare("_baseMarkersConfig" as IBaseMarkersConfig, "_serverActionHandler" as ServerActionHandler, "_westlyGroup" as Group, "_eastlyGroup" as Group, "_gainedTokensActing" as Array, "_lostTokensActing" as Array, "_gainedTokensOpposing" as Array, "_lostTokensOpposing" as Array, "_remote" as Campaigns.Network.Remote)
 		{
 			_mBaseMarkersConfig = _baseMarkersConfig;
 			_mServerActionHandler = _serverActionHandler;
