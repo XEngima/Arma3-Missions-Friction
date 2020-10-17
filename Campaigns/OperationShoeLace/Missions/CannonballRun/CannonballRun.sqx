@@ -36,10 +36,10 @@ namespace Campaigns.ShoeLace
 		{
 			_mission.Name = "Cannonball Run";
 			_mission.StartTimeOfDay = floor random 24;
-			_mission.StartMarkersActing = ["m10a_StartArea1"];
-			_mission.StartMarkersOpposing = ["m10o_StartArea"];
-			_mission.SideMarkersActing = ["m10_TruckStartPosition", "m10_SouthernLighthouse"];
-			_mission.SideMarkersOpposing = ["m10_TruckStartPosition", "m10_SouthernLighthouse", "m10o_PrimaryHelicopter", "m10o_SecondaryHelicopter", "m10_AaMarker"];
+			_mission.InsertionAreasActing = ["m10a_StartArea1"];
+			_mission.InsertionAreasOpposing = ["m10o_StartArea"];
+			_mission.VisibleMarkersActing = ["m10_TruckStartPosition", "m10_SouthernLighthouse"];
+			_mission.VisibleMarkersOpposing = ["m10_TruckStartPosition", "m10_SouthernLighthouse", "m10o_PrimaryHelicopter", "m10o_SecondaryHelicopter", "m10_AaMarker"];
 			
 			// Ambient traffic
 			_mLocationMarkers = ["m_AirportRoadMarker", "m_NisiBayRoadMarker", "m_GirnaRoadMarker", "m_JayCoveRoadMarker", "m_TheSpartanRoadMarker", "m_LimeriBayRoadMarker", "m_CaminoTwinRoadMarker", "m_KillFarmRoadMarker", "m_NorthWestRoadMarker", "m_AgiaMarinaRoadMarker", "m_ComMastRoadMarker", "m_OldOutpostRoadMarker"];

@@ -40,8 +40,8 @@ namespace Campaigns.ShoeLace
 			
 			[_startMarkers] call ShoeLaceMission.ShuffleArray;
 			
-			_mission.StartMarkersActing = [_startMarkers select 0, _startMarkers select 1, _startMarkers select 2, _startMarkers select 3, _startMarkers select 4, _startMarkers select 5];
-			_mission.StartMarkersOpposing = [_startMarkers select 6, _startMarkers select 7, _startMarkers select 8, _startMarkers select 9, _startMarkers select 10, _startMarkers select 11];
+			_mission.InsertionAreasActing = [_startMarkers select 0, _startMarkers select 1, _startMarkers select 2, _startMarkers select 3, _startMarkers select 4, _startMarkers select 5];
+			_mission.InsertionAreasOpposing = [_startMarkers select 6, _startMarkers select 7, _startMarkers select 8, _startMarkers select 9, _startMarkers select 10, _startMarkers select 11];
 		};
 		
 		protected override method Setup()

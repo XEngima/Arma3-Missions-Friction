@@ -30,10 +30,10 @@ namespace Campaigns.ShoeLace
 		protected override method InitMission("_mission" as MissionSettings)
 		{
 			_mission.Name = "Hawk Down";
-			_mission.StartMarkersActing = ["m05a_StartArea"];
-			_mission.StartMarkersOpposing = ["m05o_StartArea"];
-			_mission.SideMarkersActing = ["m05_CrashSite"];
-			_mission.SideMarkersOpposing = ["m05_CrashSite"];
+			_mission.InsertionAreasActing = ["m05a_StartArea"];
+			_mission.InsertionAreasOpposing = ["m05o_StartArea"];
+			_mission.VisibleMarkersActing = ["m05_CrashSite"];
+			_mission.VisibleMarkersOpposing = ["m05_CrashSite"];
 			_mission.AddReturnObjectiveForActing = true;
 			_mission.AddReturnObjectiveForOpposing = true;
 			_mission.StartTimeOfDay = 4 + floor random 17; // Between 4 and 20.

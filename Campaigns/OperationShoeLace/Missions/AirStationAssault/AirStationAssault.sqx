@@ -35,9 +35,9 @@ namespace Campaigns.ShoeLace
 		{
 			_mission.Name = "Air Station Assault";
 			_mission.StartTimeOfDay = floor random 4;
-			_mission.StartMarkersActing = ["m01a_startarea1", "m01a_startarea2", "m01a_startarea3"];
-			_mission.StartMarkersOpposing = ["m01o_startarea1"];
-			_mission.SideMarkersActing = ["m01a_PrimaryTarget"];
+			_mission.InsertionAreasActing = ["m01a_startarea1", "m01a_startarea2", "m01a_startarea3"];
+			_mission.InsertionAreasOpposing = ["m01o_startarea1"];
+			_mission.VisibleMarkersActing = ["m01a_PrimaryTarget"];
 			_mission.AddReturnObjectiveForActing = true;
 		};
 		

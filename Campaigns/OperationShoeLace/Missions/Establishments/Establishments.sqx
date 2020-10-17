@@ -40,8 +40,8 @@ namespace Campaigns.ShoeLace
 			_mission.Name = "Establishments";
 			_mission.StartTimeOfDay = 4 + floor random 8;
 			
-			_mission.SideMarkersActing = ["m07a_LimeriBay", "m07a_PointDelta"];
-			_mission.SideMarkersOpposing = ["m07o_MilitaryRange", "m07o_PointDelta"];
+			_mission.VisibleMarkersActing = ["m07a_LimeriBay", "m07a_PointDelta"];
+			_mission.VisibleMarkersOpposing = ["m07o_MilitaryRange", "m07o_PointDelta"];
 			
 			// Move delta markers to random fishy places
 			_mDeltaActingAreaMarker = selectRandom ["m_FishyPlaceCamoArea", "m_FishyPlaceCampingArea", "m_FishyPlaceRustyArea"];

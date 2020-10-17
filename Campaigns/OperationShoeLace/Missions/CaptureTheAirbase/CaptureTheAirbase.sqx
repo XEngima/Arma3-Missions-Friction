@@ -54,10 +54,10 @@ namespace Campaigns.ShoeLace
 		{
 			_mission.Name = "Capture The Airbase";
 			_mission.StartTimeOfDay = 5;
-			_mission.StartMarkersActing = ["m11a_StartMarker"];
-			_mission.StartMarkersOpposing = ["m11o_StartMarker"];
-			_mission.SideMarkersActing = ["m11_AirbaseTowerVincinity", "m11a_WeaponCache", "m11a_InsertionPos"];
-			_mission.SideMarkersOpposing = ["m11_AirbaseTowerVincinity", "m11o_WeaponCache", "m11o_InsertionPos"];
+			_mission.InsertionAreasActing = ["m11a_StartMarker"];
+			_mission.InsertionAreasOpposing = ["m11o_StartMarker"];
+			_mission.VisibleMarkersActing = ["m11_AirbaseTowerVincinity", "m11a_WeaponCache", "m11a_InsertionPos"];
+			_mission.VisibleMarkersOpposing = ["m11_AirbaseTowerVincinity", "m11o_WeaponCache", "m11o_InsertionPos"];
 			
 			_mWeaponCacheMarkerActing = selectRandom ["m11a_AmmoCache1", "m11a_AmmoCache2", "m11a_AmmoCache3", "m11a_AmmoCache4", "m11a_AmmoCache5", "m11a_AmmoCache6", "m11a_AmmoCache7", "m11a_AmmoCache8", "m11a_AmmoCache9", "m11a_AmmoCache10", "m11a_AmmoCache11"];
 			_mWeaponCacheMarkerOpposing = selectRandom ["m11o_AmmoCache1", "m11o_AmmoCache2", "m11o_AmmoCache3", "m11o_AmmoCache4", "m11o_AmmoCache5", "m11o_AmmoCache6", "m11o_AmmoCache7", "m11o_AmmoCache8", "m11o_AmmoCache9", "m11o_AmmoCache10"];
