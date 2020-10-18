@@ -34,8 +34,8 @@ namespace Campaigns.ShoeLace
 			_mission.InsertionAreasOpposing = ["m05o_StartArea"];
 			_mission.VisibleMarkersActing = ["m05_CrashSite"];
 			_mission.VisibleMarkersOpposing = ["m05_CrashSite"];
-			_mission.AddReturnObjectiveForActing = true;
-			_mission.AddReturnObjectiveForOpposing = true;
+			_mission.HasReturnObjectiveActing = true;
+			_mission.HasReturnObjectiveOpposing = true;
 			_mission.StartTimeOfDay = 4 + floor random 17; // Between 4 and 20.
 		};
 		

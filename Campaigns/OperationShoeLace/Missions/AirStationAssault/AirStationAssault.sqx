@@ -38,7 +38,7 @@ namespace Campaigns.ShoeLace
 			_mission.InsertionAreasActing = ["m01a_startarea1", "m01a_startarea2", "m01a_startarea3"];
 			_mission.InsertionAreasOpposing = ["m01o_startarea1"];
 			_mission.VisibleMarkersActing = ["m01a_PrimaryTarget"];
-			_mission.AddReturnObjectiveForActing = true;
+			_mission.HasReturnObjectiveActing = true;
 		};
 		
 		protected override method String AddBriefingInfoForActing()
