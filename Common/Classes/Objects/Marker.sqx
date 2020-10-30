@@ -14,7 +14,7 @@ namespace Tvtcf.Common
 		#region Initializers
 		
 		// Creates a public icon marker.
-		public static method NewIconMarker(
+		public static method Marker NewIconMarker(
 			"_name" as String,
 			"_position" as Array, 
 			["_type" as String, "hd_dot"], 
@@ -26,7 +26,7 @@ namespace Tvtcf.Common
 		};
 	
 		// Creates a public shape marker.
-		public static method NewShapeMarker(
+		public static method Marker NewShapeMarker(
 			"_name" as String,
 			"_position" as Array,
 			["_shape" as String, "RECTANGLE"],
