@@ -59,6 +59,7 @@ namespace Tvtcf.Client.Statics
 		{
 			// Delete tasks
 			call ClientObjects.TaskHandler.DeleteAllTasks;
+			call ClientObjects.MapMarkerHandler.CleanUpAllMarkers;
 		};
 		
 		public static method OnMissionSetup("_missionMarkersInfo" as MissionMarkersInfo)
@@ -103,7 +104,7 @@ namespace Tvtcf.Client.Statics
 			call _briefingService.RunAsync;
 		};
 		
-		public static method OnInsertGroup("_group" as Group, "_position" as Array, "_doTeleport" as Boolean)
+		public static method OnInsertGroup("_group" as Group, "_position" as Array, "_showInsertionMarker" as Boolean, "_doTeleport" as Boolean)
 		{
 			private ["_teleporter" as TeleportService];
 			
@@ -112,7 +113,12 @@ namespace Tvtcf.Client.Statics
 			
 			if (playerSide == side _group) then
 			{
-				[_position] call ClientObjects.MapMarkerHandler.AddInsertionMarker;
+				if (_showInsertionMarker) then {
+					[_position] call ClientObjects.MapMarkerHandler.AddInsertionMarker;
+				}
+				else {
+					call ClientObjects.MapMarkerHandler.RemoveInsertionMarkers;
+				};
 			
 				if (_doTeleport) then {
 					_teleporter = [_position] new TeleportService;
@@ -127,7 +133,14 @@ namespace Tvtcf.Client.Statics
 			// Hide insertion menu option
 			call TvtcfActionMenuHandler.UpdateVisibleOptions;
 		};
-		
+
+		public static method OnCreateSideMarker("_side" as Side, "_markerInfo" as Marker)
+		{
+			if (_side == playerSide) then {
+				[_markerInfo] call ClientObjects.MapMarkerHandler.AddMarker;
+			};
+		};
+
 		public static method OnTaskStateChanged("_side" as Side, "_objectivePrio" as ObjectivePrio, "_objectiveState" as ObjectiveState)
 		{
 			private ["_teleporter" as TeleportService];
