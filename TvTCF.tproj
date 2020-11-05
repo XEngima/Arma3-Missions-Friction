@@ -530,16 +530,13 @@
       <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="init.sqx" FileName="init.sqx">
         <SubNodes />
       </ProjectNodeViewModel>
-      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="LICENSE" FileName="LICENSE">
-        <SubNodes />
-      </ProjectNodeViewModel>
       <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="mission.sqm" FileName="mission.sqm">
         <SubNodes />
       </ProjectNodeViewModel>
       <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="MissionParameters.ext" FileName="MissionParameters.ext">
         <SubNodes />
       </ProjectNodeViewModel>
-      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="README.sqx" FileName="README.sqx">
+      <ProjectNodeViewModel xsi:type="ProjectFileNodeViewModel" Name="TvTCF_LICENSE.txt" FileName="TvTCF_LICENSE.txt">
         <SubNodes />
       </ProjectNodeViewModel>
     </SubNodes>
