@@ -187,7 +187,7 @@ namespace Campaigns.ShoeLace
 		protected override method MissionObjective CreateSecondaryObjectiveForActing()
 		{
 			private _shortDescription = "Destroy Helicpter";
-			private _longDescription = "Destroy the enemy attack helicopter. But only if it is safe! If you don't return with the drawings the primary objective will be compromised.";
+			private _longDescription = "Destroy the enemy attack helicopter (if you have any explosives).";
 			
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};

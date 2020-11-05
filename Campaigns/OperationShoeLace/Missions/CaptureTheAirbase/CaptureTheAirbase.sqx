@@ -402,9 +402,8 @@ namespace Campaigns.ShoeLace
 			
 			var _friendliesCloseToTowerCount = ([_mSpawnedActingSoldiers] call _self.CountUnitsNearTower) + ([_self.ActingUnits] call _self.CountUnitsNearTower);
 			var _enemiesCloseToTowerCount = ([_mSpawnedOpposingSoldiers] call _self.CountUnitsNearTower) + ([_mSpawnedIndepententSoldiers] call _self.CountUnitsNearTower) + ([_self.OpposingUnits] call _self.CountUnitsNearTower);
-			var _allPlayersAreDead = ([MissionSide.Acting] call _self.CountPlayersAliveOnSide) + ([MissionSide.Opposing] call _self.CountPlayersAliveOnSide) == 0;
 			
-			if (_self.RemainingTime == 0 || _allPlayersAreDead) then
+			if (_self.HasEnded) then
 			{
 				if (_friendliesCloseToTowerCount >= _enemiesCloseToTowerCount) then {
 					_self.GainedTokensActing pushBack "AIRBASE";
@@ -443,9 +442,8 @@ namespace Campaigns.ShoeLace
 			
 			var _friendliesCloseToTowerCount = ([_mSpawnedOpposingSoldiers] call _self.CountUnitsNearTower) + ([_self.OpposingUnits] call _self.CountUnitsNearTower);
 			var _enemiesCloseToTowerCount = ([_mSpawnedActingSoldiers] call _self.CountUnitsNearTower) + ([_mSpawnedIndepententSoldiers] call _self.CountUnitsNearTower) + ([_self.ActingUnits] call _self.CountUnitsNearTower);
-			var _allPlayersAreDead = ([MissionSide.Opposing] call _self.CountPlayersAliveOnSide) + ([MissionSide.Acting] call _self.CountPlayersAliveOnSide) == 0;
 			
-			if (_self.RemainingTime == 0 || _allPlayersAreDead) then
+			if (_self.HasEnded) then
 			{
 				if (_friendliesCloseToTowerCount >= _enemiesCloseToTowerCount) then {
 					_self.GainedTokensOpposing pushBack "AIRBASE";
