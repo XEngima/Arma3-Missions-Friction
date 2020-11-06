@@ -350,29 +350,29 @@ namespace Campaigns.ShoeLace
 			};
 		};
 		
-		protected override method String AddBriefingInfoForActing()
+		protected override method String AddBriefingActing()
 		{
 			var _p1 = "The Stratis Airbase is one of the keys in our operation. We need to capture it to enable an easier resupply chain from our main forces, and so that we do not risk it falling into enemy hands.";
 			var _p2 = "<br /><br />We know about an ammo cache. If you find an opportunity you may try to go there and secure something of interest for the rest of our operation [use the action menu].";
 			var _p3 = "<br /><br />Remember to bring AT launchers!";
 		
-			return _p1 + _p2 + _p3 + call _base.AddBriefingInfoForActing;
+			return _p1 + _p2 + _p3 + call _base.AddBriefingActing;
 		};
 		
-		protected override method String AddBriefingInfoForOpposing()
+		protected override method String AddBriefingOpposing()
 		{
 			var _p1 = "The Stratis Airbase is one of the keys in our operation. We need to capture it to enable an easier resupply chain from our main forces, and so that we do not risk it falling into enemy hands.";
 			var _p2 = "<br /><br />We know about an ammo cache. If you find an opportunity you may try to go there and secure something of interest for the rest of our operation [use the action menu].";
 			
-			return _p1 + _p2 + call _base.AddBriefingInfoForOpposing;
+			return _p1 + _p2 + call _base.AddBriefingOpposing;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveActing()
 		{
 			return ["Capture the airbase.", "Assist the brigade in siezing the tower and clear the tower's closest surroundings (250 meters) of enemy forces. Join them at Camp Maxwell and board the helicopter as quickly as you can!"] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveOpposing()
 		{
 			return ["Capture the airbase.", "Assist the brigade in siezing the tower and clear the tower's closest surroundings (250 meters) of enemy forces. Join them at Agia Marina and board the armored transport as quickly as you can!"] new MissionObjective;
 		};

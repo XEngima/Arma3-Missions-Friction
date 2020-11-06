@@ -67,12 +67,12 @@ namespace Campaigns.ShoeLace
 		
 		protected property Object OpposingSupportBox { get; set; };
 		
-		protected override method String AddBriefingInfoForActing()
+		protected override method String AddBriefingActing()
 		{
 			return [MissionSide.Acting] call _self.GetTokenBriefingText;
 		};
 		
-		protected override method String AddBriefingInfoForOpposing()
+		protected override method String AddBriefingOpposing()
 		{
 			return [MissionSide.Opposing] call _self.GetTokenBriefingText;
 		};

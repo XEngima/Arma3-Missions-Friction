@@ -51,17 +51,17 @@ namespace Campaigns.ShoeLace
 			"m07o_PointDelta" setMarkerPos getMarkerPos _mDeltaOpposingAreaMarker;
 		};
 		
-		protected override method String AddBriefingInfoForActing()
+		protected override method String AddBriefingActing()
 		{
 			return "Welcome! The situation is calm and under control for the moment, and the whole brigade is working on establishments and setting up the perimiters. No hostile contacts this far, but local guerillas have expressed their hostility, and group Alpha Six has reported seing some kind of activity around Point Delta. ";
 		};
 		
-		protected override method String AddBriefingInfoForOpposing()
+		protected override method String AddBriefingOpposing()
 		{
 			return "Welcome! The situation is calm and under control for the moment, and the whole brigade is working on establishments and setting up the perimiters. No hostile contacts this far, but local guerillas have expressed their hostility, and group Charlie Four has reported seing some kind of activity around Point Delta.";
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveActing()
 		{
 			private _shortDescription = "Deliver supplies";
 			private _longDescription = "Drive the truck to Limeri Bay, park it among the other vehicles there, and leave it there. Then there are other vehicles at your disposal.";
@@ -69,7 +69,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForActing()
+		protected override method MissionObjective AddSecondaryObjectiveActing()
 		{
 			private _shortDescription = "Investigate Point Delta";
 			private _longDescription = "Go to Point Delta and investigate the area. Search for at least two minutes, and confiscate anything that you find useful - like guerilla ammo - for the rest of the operation. You can confiscate things that you find with the action menu. But be aware of the risk of possible hostile contacts!";
@@ -77,7 +77,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveOpposing()
 		{
 			private _shortDescription = "Get the mail";
 			private _longDescription = "Go to Agia Marina's military range to get the brigade's mail. Find the pallet - a big box - and check if there is anything for us.";
@@ -85,7 +85,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForOpposing()
+		protected override method MissionObjective AddSecondaryObjectiveOpposing()
 		{
 			private _shortDescription = "Investigate Point Delta";
 			private _longDescription = "Go to Point Delta and investigate the area. Search for at least two minutes, and confiscate anything that you find useful - like guerilla ammo - for the rest of the operation. You can confiscate things that you find with the action menu. But be aware of the risk of possible hostile contacts!";

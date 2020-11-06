@@ -157,7 +157,7 @@ namespace Campaigns.ShoeLace
 			};
 		};
 		
-		protected override method String AddBriefingInfoForActing()
+		protected override method String AddBriefingActing()
 		{
 			var _briefingText = "We are now quite sure that the enemy is about to raise some kind of military building or weapon. The military drawings are most likely in a desk in one of the five office buildings marked on the map.";
 			
@@ -167,16 +167,16 @@ namespace Campaigns.ShoeLace
 			
 			_briefingText = _briefingText + "<br /><br />Remember to get in the assault boat before inserting and to bring explosives (if you have any).";
 			
-			return _briefingText + call _base.AddBriefingInfoForActing;
+			return _briefingText + call _base.AddBriefingActing;
 		};
 		
-		protected override method String AddBriefingInfoForOpposing()
+		protected override method String AddBriefingOpposing()
 		{
 			var _text = "A not so ordinary night at the airbase. The threat of intruders breaking in and stealing materiel is always present, but intelligence reveals that there might be a higher risk of that than usual. The five main enterable magazines are military offices containing information that is not to be stolen at any cost, and the attack helicopter at the tower is a high value target for enemy forces.";
-			return _text + call _base.AddBriefingInfoForOpposing;
+			return _text + call _base.AddBriefingOpposing;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveActing()
 		{
 			private _shortDescription = "Steal military drawings";
 			private _longDescription = "Find the office desk with military drawings in one of the numbered buildings and steal them.";
@@ -184,7 +184,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForActing()
+		protected override method MissionObjective AddSecondaryObjectiveActing()
 		{
 			private _shortDescription = "Destroy Helicpter";
 			private _longDescription = "Destroy the enemy attack helicopter (if you have any explosives).";
@@ -192,7 +192,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveOpposing()
 		{
 			private _shortDescription = "Patrol the airbase";
 			private _longDescription = "Patrol the airbase and keep it safe by preventing any intruders to steal or destroy anything.";
@@ -200,7 +200,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForOpposing()
+		protected override method MissionObjective AddSecondaryObjectiveOpposing()
 		{
 			private _shortDescription = "Kill any intruders";
 			private _longDescription = "With regards to the current higher alert any intruders must be killed immediately.";

@@ -41,7 +41,7 @@ namespace Campaigns.ShoeLace
 			_mission.HasReturnObjectiveActing = true;
 		};
 		
-		protected override method String AddBriefingInfoForActing()
+		protected override method String AddBriefingActing()
 		{
 			var _p1 = "A lot of enemy supply trucks have been spotted entering Air Station Mike lately. Our enemies are obviously up to something. Let's hit while we have a good chance of make some damage.";
 			var _p2 = "<br /><br />Important! Keep this operation clean. When the first thing blows, or when the first enemy is killed, they will have reinforcements all over the place.";
@@ -52,10 +52,10 @@ namespace Campaigns.ShoeLace
 				_p4 = "<br /><br />Earlier success has given you access to a UAV of type Darter.";
 			};
 			
-			return _p1 + _p2 + _p3 + _p4 + call _base.AddBriefingInfoForActing;
+			return _p1 + _p2 + _p3 + _p4 + call _base.AddBriefingActing;
 		};
 		
-		protected override method String AddBriefingInfoForOpposing()
+		protected override method String AddBriefingOpposing()
 		{
 			var _p1 = "We have tried to keep this operation as secret as we can. If we keep Air Station Mike safe until tomorrow, we are in a good position to soon advance into enemy territory.";
 			var _p2 = "<br /><br />Friendly forces are on high alert. If you or any equipment are attacked then expect immediate arrival of reinforcements.";
@@ -65,7 +65,7 @@ namespace Campaigns.ShoeLace
 				_p3 = "<br /><br />Earlier success has given you access to a UAV of type Darter.";
 			};
 			
-			return _p1 + _p2 + _p3 + call _base.AddBriefingInfoForOpposing;
+			return _p1 + _p2 + _p3 + call _base.AddBriefingOpposing;
 		};
 		
 		protected override method Setup()
@@ -187,7 +187,7 @@ namespace Campaigns.ShoeLace
 			[_e] call _base.OnOpposingGroupInserted;
 		};
 
-		protected override method MissionObjective AddPrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveActing()
 		{
 			private _shortDescription = _mPrimaryTargetVehicle getVariable "ObjectiveText";
 			private _longDescription = _shortDescription + ". The truck is located somewhere inside the area of Air Station Mike-26.";
@@ -195,7 +195,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForActing()
+		protected override method MissionObjective AddSecondaryObjectiveActing()
 		{
 			private _shortDescription = _mSecondaryTargetVehicle getVariable "ObjectiveText";
 			private _longDescription = _shortDescription + ". The truck is located somewhere inside the area of Air Station Mike-26.";
@@ -203,7 +203,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 
-		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveOpposing()
 		{
 			private _shortDescription = "Patrol Air Station Mike-26";
 			private _longDescription = "Patrol the Air Station Mike-26 and keep it safe from intruders.";
@@ -211,7 +211,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForOpposing()
+		protected override method MissionObjective AddSecondaryObjectiveOpposing()
 		{
 			private _shortDescription = "Hunt down any intruders";
 			private _longDescription = "Hunt down and kill all intruders.";

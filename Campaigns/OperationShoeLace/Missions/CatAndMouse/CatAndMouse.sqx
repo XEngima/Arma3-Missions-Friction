@@ -75,7 +75,7 @@ namespace Campaigns.ShoeLace
 			};
 		};
 		
-		protected override method String AddBriefingInfoForActing()
+		protected override method String AddBriefingActing()
 		{
 			var _p1 = "An intercepted radio message reveals that AAF drone equipment has been accidentaly left somewhere in Girna. The message was totally unencrypted, so expect that both AAF and enemy forces can show up too.";
 			
@@ -84,10 +84,10 @@ namespace Campaigns.ShoeLace
 				_p2 = "<br /><br />We have currently a ceasefire agreement with AAF. However, be very careful with target identification, accidentally kill any of them we will loose alliance.";
 			};
 			
-			return _p1 + _p2 + call _base.AddBriefingInfoForActing;
+			return _p1 + _p2 + call _base.AddBriefingActing;
 		};
 		
-		protected override method String AddBriefingInfoForOpposing()
+		protected override method String AddBriefingOpposing()
 		{
 			var _p1 = "An intercepted radio message reveals that AAF drone equipment has been accidentaly left somewhere in Girna. The message was totally unencrypted, so expect that both AAF and enemy forces can show up too.";
 			
@@ -96,25 +96,25 @@ namespace Campaigns.ShoeLace
 				_p2 = "<br /><br />We have currently a ceasefire agreement with AAF. However, be very careful with target identification, accidentally kill any of them we will loose alliance.";
 			};
 			
-			return _p1 + _p2 + call _base.AddBriefingInfoForOpposing;
+			return _p1 + _p2 + call _base.AddBriefingOpposing;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveActing()
 		{
 			return ["Find the drone.", "Find the wooden box with the drone equipment. It can be anywhere in Girna with 75 meters from the town centre, inside a building or outside."] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForActing()
+		protected override method MissionObjective AddSecondaryObjectiveActing()
 		{
 			return ["Kill the enemy squad."] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveOpposing()
 		{
 			return ["Find the drone.", "Find the wooden box with the drone equipment. It can be anywhere in Girna with 75 meters from the town centre, inside a building or outside."] new MissionObjective;
 		};
 		
-		protected override method MissionObjective AddSecondaryObjectiveForOpposing()
+		protected override method MissionObjective AddSecondaryObjectiveOpposing()
 		{
 			return ["Kill the enemy squad."] new MissionObjective;
 		};
