@@ -367,12 +367,12 @@ namespace Campaigns.ShoeLace
 			return _p1 + _p2 + call _base.AddBriefingInfoForOpposing;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveForActing()
 		{
 			return ["Capture the airbase.", "Assist the brigade in siezing the tower and clear the tower's closest surroundings (250 meters) of enemy forces. Join them at Camp Maxwell and board the helicopter as quickly as you can!"] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
 		{
 			return ["Capture the airbase.", "Assist the brigade in siezing the tower and clear the tower's closest surroundings (250 meters) of enemy forces. Join them at Agia Marina and board the armored transport as quickly as you can!"] new MissionObjective;
 		};

@@ -93,7 +93,7 @@ namespace Campaigns.ShoeLace
 			return _p1 + _p2 + call _base.AddBriefingInfoForOpposing;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveForActing()
 		{
 			private _shortDescription = "Destroy wreckage";
 			private _longDescription = "Find the downed helicopter and destroy it before it falls into enemy hands.";
@@ -101,7 +101,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
 		{
 			private _shortDescription = "Investigate wreckage";
 			private _longDescription = "Find the downed enemy helicopter and investigate the wreckage before the enemy finds it.";

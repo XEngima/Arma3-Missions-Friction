@@ -176,7 +176,7 @@ namespace Campaigns.ShoeLace
 			return _text + call _base.AddBriefingInfoForOpposing;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveForActing()
 		{
 			private _shortDescription = "Steal military drawings";
 			private _longDescription = "Find the office desk with military drawings in one of the numbered buildings and steal them.";
@@ -184,7 +184,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreateSecondaryObjectiveForActing()
+		protected override method MissionObjective AddSecondaryObjectiveForActing()
 		{
 			private _shortDescription = "Destroy Helicpter";
 			private _longDescription = "Destroy the enemy attack helicopter (if you have any explosives).";
@@ -192,7 +192,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
 		{
 			private _shortDescription = "Patrol the airbase";
 			private _longDescription = "Patrol the airbase and keep it safe by preventing any intruders to steal or destroy anything.";
@@ -200,7 +200,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreateSecondaryObjectiveForOpposing()
+		protected override method MissionObjective AddSecondaryObjectiveForOpposing()
 		{
 			private _shortDescription = "Kill any intruders";
 			private _longDescription = "With regards to the current higher alert any intruders must be killed immediately.";

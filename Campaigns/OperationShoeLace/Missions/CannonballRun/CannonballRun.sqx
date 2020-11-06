@@ -101,12 +101,12 @@ namespace Campaigns.ShoeLace
 			[MissionSide.Opposing, true] call _base.SetIndependentAlliance;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveForActing()
 		{
 			return ["Deliver truck to AAF.", "Drive the truck to AAF at the Southern Lighthouse. Do it as fast as you can, the enemy is believed to know about the operation already. An armed vehicle is there for escort."] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreatePrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
 		{
 			return ["Destroy the enemy truck.", "Take the helicopter, perform a search for the enemy vehicle and take it out. Just make sure that you under no circumstances kill any civilians or any AAF personel."] new MissionObjective;
 		};

@@ -187,7 +187,7 @@ namespace Campaigns.ShoeLace
 			[_e] call _base.OnOpposingGroupInserted;
 		};
 
-		protected override method MissionObjective CreatePrimaryObjectiveForActing()
+		protected override method MissionObjective AddPrimaryObjectiveForActing()
 		{
 			private _shortDescription = _mPrimaryTargetVehicle getVariable "ObjectiveText";
 			private _longDescription = _shortDescription + ". The truck is located somewhere inside the area of Air Station Mike-26.";
@@ -195,7 +195,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreateSecondaryObjectiveForActing()
+		protected override method MissionObjective AddSecondaryObjectiveForActing()
 		{
 			private _shortDescription = _mSecondaryTargetVehicle getVariable "ObjectiveText";
 			private _longDescription = _shortDescription + ". The truck is located somewhere inside the area of Air Station Mike-26.";
@@ -203,7 +203,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 
-		protected override method MissionObjective CreatePrimaryObjectiveForOpposing()
+		protected override method MissionObjective AddPrimaryObjectiveForOpposing()
 		{
 			private _shortDescription = "Patrol Air Station Mike-26";
 			private _longDescription = "Patrol the Air Station Mike-26 and keep it safe from intruders.";
@@ -211,7 +211,7 @@ namespace Campaigns.ShoeLace
 			return [_shortDescription, _longDescription] new MissionObjective;
 		};
 		
-		protected override method MissionObjective CreateSecondaryObjectiveForOpposing()
+		protected override method MissionObjective AddSecondaryObjectiveForOpposing()
 		{
 			private _shortDescription = "Hunt down any intruders";
 			private _longDescription = "Hunt down and kill all intruders.";
