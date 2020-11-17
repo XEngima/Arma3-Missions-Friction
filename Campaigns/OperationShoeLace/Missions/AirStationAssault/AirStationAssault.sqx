@@ -104,7 +104,7 @@ namespace Campaigns.ShoeLace
 			_vehicle lock true;
 			_mAllVehicles pushBack _vehicle;
 			
-			_vehicle = ["MRAP", _vehicleMarkers select 4, MissionSide.Opposing] call _self.CreateSideVehicleOnMarker;
+			_vehicle = ["CAR", _vehicleMarkers select 4, MissionSide.Opposing] call _self.CreateSideVehicleOnMarker;
 			_mAllVehicles pushBack _vehicle;
 			
 			_vehicle = ["QUADBIKE", _vehicleMarkers select 5, MissionSide.Opposing] call _self.CreateSideVehicleOnMarker;

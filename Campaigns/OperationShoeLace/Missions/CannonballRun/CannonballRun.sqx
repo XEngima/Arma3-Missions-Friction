@@ -74,7 +74,7 @@ namespace Campaigns.ShoeLace
 		protected override method Setup()
 		{
 			_mTruck = ["DEVICE TRUCK", "m10a_TruckStartMarker", MissionSide.Acting] call _self.CreateSideVehicleOnMarker;
-			["MRAP HMG", "m10a_EscortStartMarker", MissionSide.Acting] call _self.CreateSideVehicleOnMarker;
+			["CAR HMG", "m10a_EscortStartMarker", MissionSide.Acting] call _self.CreateSideVehicleOnMarker;
 			
 			if ("HELICOPTER" in _self.LostTokensOpposing) then
 			{

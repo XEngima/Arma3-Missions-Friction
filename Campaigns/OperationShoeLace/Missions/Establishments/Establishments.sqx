@@ -123,7 +123,7 @@ namespace Campaigns.ShoeLace
 			_mCheckMailActionId = [_mMailBox, "Collect mail", MissionSide.Opposing] call _self.AddAction;
 			
 			// Create vehicles at Limeri Bay
-			["MRAP", "m07a_LimeriBayMrap", MissionSide.Acting] call _self.CreateSideVehicleOnMarker;
+			["CAR", "m07a_LimeriBayMrap", MissionSide.Acting] call _self.CreateSideVehicleOnMarker;
 			["QUADBIKE", "m07a_LimeriBayQuadBike", MissionSide.Acting] call _self.CreateSideVehicleOnMarker;
 			
 			// Create Explosives box that may be found at point Delta

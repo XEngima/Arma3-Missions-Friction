@@ -80,7 +80,7 @@ namespace Campaigns.ShoeLace
 			
 			["Land_BarGate_F", "m06o_RoadBlock_BarGate"] call _self.CreateVehicleOnMarker;
 			["RoadCone_L_F", "m06o_RoadBlock_RoadCone"] call _self.CreateVehicleOnMarker;
-			["MRAP HMG", "m06o_RoadBlock_Vehicle", MissionSide.Opposing, false, true] call _self.CreateSideVehicleOnMarker;
+			["CAR HMG", "m06o_RoadBlock_Vehicle", MissionSide.Opposing, false, true] call _self.CreateSideVehicleOnMarker;
 			private _guard1 = ["RIFLEMAN", getMarkerPos "m06o_RoadBlock_Guard", MissionSide.Opposing] call _self.CreateSideAiSoldier;
 			_guard1 setDir markerDir "m06o_RoadBlock_Guard";
 			["RIFLEMAN", getMarkerPos "m06o_RoadBlock_Guard", MissionSide.Opposing, group _guard1] call _self.CreateSideAiSoldier;
@@ -128,7 +128,7 @@ namespace Campaigns.ShoeLace
 			
 			[_parkedVehicleMarkers] call ShoeLaceMission.ShuffleArray;
 			
-			var _vehicleTypes = ["MRAP", "MRAP", "QUADBIKE", "QUADBIKE", "TRANSPORT TRUCK", "REPAIR TRUCK", "MEDICAL TRUCK"];
+			var _vehicleTypes = ["CAR", "CAR", "QUADBIKE", "QUADBIKE", "TRANSPORT TRUCK", "REPAIR TRUCK", "MEDICAL TRUCK"];
 			var _numberOfVehicles = 2 + floor random 7; // Between 2 and 8.
 			
 			for "_i" from 0 to _numberOfVehicles - 1 do
@@ -283,7 +283,7 @@ namespace Campaigns.ShoeLace
 			{
 				if (isNull _mAmbientVehicle1) then
 				{
-					var _vehicleType = selectRandom ["MRAP", "MRAP", "QUADBIKE", "QUADBIKE", "FUEL TRUCK", "TRANSPORT TRUCK", "MRAP HMG"];
+					var _vehicleType = selectRandom ["CAR", "CAR", "QUADBIKE", "QUADBIKE", "FUEL TRUCK", "TRANSPORT TRUCK", "CAR HMG"];
 					var _spawnMarker = selectRandom ["m06o_AmbientVehiclePos1", "m06o_AmbientVehiclePos2", "m06o_AmbientVehiclePos3", "m06o_AmbientVehiclePos4", "m06o_AmbientVehiclePos5", "m06o_AmbientVehiclePos6"];
 					
 					_mAmbientVehicle1 = [_vehicleType, _spawnMarker, MissionSide.Opposing, false, true] call _self.CreateSideVehicleOnMarker;
@@ -297,7 +297,7 @@ namespace Campaigns.ShoeLace
 			{
 				if (isNull _mAmbientVehicle2) then
 				{
-					var _vehicleType = selectRandom ["MRAP", "MRAP", "QUADBIKE", "QUADBIKE", "FUEL TRUCK", "TRANSPORT TRUCK", "MRAP HMG"];
+					var _vehicleType = selectRandom ["CAR", "CAR", "QUADBIKE", "QUADBIKE", "FUEL TRUCK", "TRANSPORT TRUCK", "CAR HMG"];
 					var _spawnMarker = selectRandom ["m06o_AmbientVehiclePos1", "m06o_AmbientVehiclePos2", "m06o_AmbientVehiclePos3", "m06o_AmbientVehiclePos4", "m06o_AmbientVehiclePos5", "m06o_AmbientVehiclePos6"];
 					
 					_mAmbientVehicle2 = [_vehicleType, _spawnMarker, MissionSide.Opposing, false, true] call _self.CreateSideVehicleOnMarker;

@@ -197,9 +197,9 @@ namespace Campaigns.ShoeLace
 			};
 		
 			_self.ActingQuadbike = ["QUADBIKE", BaseMarker.LandVehicles, MissionSide.Acting, true] call _self.CreateSideVehicleInBase;
-			_self.ActingMrap = ["MRAP", BaseMarker.LandVehicles, MissionSide.Acting, true] call _self.CreateSideVehicleInBase;
+			_self.ActingMrap = ["CAR", BaseMarker.LandVehicles, MissionSide.Acting, true] call _self.CreateSideVehicleInBase;
 			_self.OpposingQuadbike = ["QUADBIKE", BaseMarker.LandVehicles, MissionSide.Opposing, true] call _self.CreateSideVehicleInBase;
-			_self.OpposingMrap = ["MRAP", BaseMarker.LandVehicles, MissionSide.Opposing, true] call _self.CreateSideVehicleInBase;
+			_self.OpposingMrap = ["CAR", BaseMarker.LandVehicles, MissionSide.Opposing, true] call _self.CreateSideVehicleInBase;
 			
 			call _base.Setup;
 		};
